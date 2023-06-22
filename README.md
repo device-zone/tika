@@ -1,0 +1,2 @@
+# tika
+Tika server binaries
