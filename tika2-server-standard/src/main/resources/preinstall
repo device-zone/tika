@@ -1,0 +1,3 @@
+/usr/bin/getent group tika > /dev/null || /usr/sbin/groupadd -r tika
+/usr/bin/getent passwd tika > /dev/null || /usr/sbin/useradd -r -g tika tika -s /sbin/nologin -d /run/tika
+

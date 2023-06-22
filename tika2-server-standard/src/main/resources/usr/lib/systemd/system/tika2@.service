@@ -1,0 +1,14 @@
+[Unit] 
+Description=Apache Tika - a content analysis toolkit 
+After=syslog.target 
+
+[Service] 
+User=tika
+EnvironmentFile=/etc/sysconfig/tika2-%i
+ExecStart=/etc/alternatives/java_sdk_17/bin/java $JAVA_OPTS -jar "/usr/share/java/tika2/tika-server-standard-${tika.version}.jar" $TIKA_OPTS
+Restart=on-failure
+RestartSec=10s
+
+[Install] 
+WantedBy=multi-user.target 
+
