@@ -142,6 +142,8 @@
           </preinstallScriptlet>
 	  <requires>
             <require>java-17-headless</require>
+            <require>tesseract-langpack-eng</require>
+            <require>ImageMagick</require>
           </requires>
         </configuration>
       </plugin>
